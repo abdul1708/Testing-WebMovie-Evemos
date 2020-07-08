@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 // Component 
-import Album from './components/pages/album/album'
+import Price from './components/pages/price/price'
 
 // Layout 
 import Header from './components/pages/layout/header'
-import Jumbotron from './components/pages/layout/jombotron'
+import Carousel from './components/pages/layout/carousel'
 import Footer from './components/pages/layout/footer'
 
 
@@ -16,10 +16,10 @@ export default class App extends Component {
       <BrowserRouter>
         <Header />
         <main role="main">
-          <Jumbotron />
-          <Route exact path='/' component={Album} />
+          <Carousel />
+          <Route exact path='/' component={Price} />
         </main>
-        <Footer />
+        <Footer /> 
       </BrowserRouter>
     )
   }

@@ -1,24 +1,24 @@
-/*
- * Jumbotron
- */
-.jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-bottom: 0;
-  background-color: #fff; }
-
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem; } }
-.jumbotron p:last-child {
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
   margin-bottom: 0; }
 
-.jumbotron h1 {
-  font-weight: 300; }
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10; }
 
-.jumbotron .container {
-  max-width: 40rem; }
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem; }
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem; }
 
 /*
  * Footer
