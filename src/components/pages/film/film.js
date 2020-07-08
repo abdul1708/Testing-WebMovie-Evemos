@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-export default class price extends Component {
+export default class film extends Component {
   state = {
-    fish: [],
+    film: [],
     loading: false,
   }
 
@@ -11,7 +11,7 @@ export default class price extends Component {
     const getPosts = async () => {
       this.setState({ loading: true });
       const results = await axios.get('https://ghibliapi.herokuapp.com/films/');
-      this.setState({ fish: results.data });
+      this.setState({ film: results.data });
       this.setState({ loading: false });
     }
     getPosts();
@@ -19,7 +19,7 @@ export default class price extends Component {
 
   render() {
 
-    const { fish, loading } = this.state;
+    const { film, loading } = this.state;
 
     if (loading) {
       return <h2>Loading..</h2>
@@ -30,14 +30,14 @@ export default class price extends Component {
         <div class="container">
 
           <div class="row">
-            {fish.map(person =>
+            {film.map(show =>
               <div class="col-md-4">
-                <div class="card mb-4 shadow-sm" key={person.id}>
+                <div class="card mb-4 shadow-sm" key={show.id}>
                   <svg class="bd-placeholder-img card-img-top" width="100%" height="225" >
-                    <text x="50%" y="50%" fill="#000">{person.title}</text>
+                    <text x="50%" y="50%" fill="#000">{show.title}</text>
                   </svg>
                   <div class="card-body">
-                    <p class="card-text">{person.description.slice(0, 100) + ' ... '}</p>
+                    <p class="card-text">{show.description.slice(0, 100) + ' ... '}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <button
@@ -53,12 +53,12 @@ export default class price extends Component {
               </div>
             )}
 
-            {fish.map(detperson =>
-              <div key={detperson.id} class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            {film.map(detshow =>
+              <div key={detshow.id} class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Detail Price</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Detail Film</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -67,15 +67,15 @@ export default class price extends Component {
                       <table class="table table-striped table-sm">
                         <tr>
                           <td>ID: </td>
-                          <td>{detperson.id}</td>
+                          <td>{detshow.id}</td>
                         </tr>
                         <tr>
                           <td>title: </td>
-                          <td>{detperson.title}</td>
+                          <td>{detshow.title}</td>
                         </tr>
                         <tr>
                           <td>description: </td>
-                          <td>{detperson.description}</td>
+                          <td>{detshow.description}</td>
                         </tr>
                       </table>
                     </div>

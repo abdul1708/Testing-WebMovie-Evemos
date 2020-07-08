@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 // Component 
-import Price from './components/pages/price/price'
+import Film from './components/pages/film/film'
 
 // Layout 
 import Header from './components/pages/layout/header'
@@ -17,7 +17,7 @@ export default class App extends Component {
         <Header />
         <main role="main">
           <Carousel />
-          <Route exact path='/' component={Price} />
+          <Route exact path='/' component={Film} />
         </main>
         <Footer /> 
       </BrowserRouter>
