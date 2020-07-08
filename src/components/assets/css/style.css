@@ -31,6 +31,21 @@ footer p {
   margin-bottom: .25rem; }
 
 /*
+ * Color
+ */
+.cBlack {
+  background-color: #000000; }
+
+.cOrange {
+  background-color: #cf7500; }
+
+.cGold {
+  background-color: #f0a500; }
+
+.cWhite {
+  background-color: #f4f4f4; }
+
+/*
  * Padding
  */
 .pt-6 {

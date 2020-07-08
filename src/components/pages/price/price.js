@@ -34,11 +34,10 @@ export default class price extends Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm" key={person.id}>
                   <svg class="bd-placeholder-img card-img-top" width="100%" height="225" >
-                    <title>Placeholder</title>
-                    <text x="50%" y="50%" fill="#000" dy=".0">{person.title}</text>
+                    <text x="50%" y="50%" fill="#000">{person.title}</text>
                   </svg>
                   <div class="card-body">
-                    <p class="card-text">{person.description}</p>
+                    <p class="card-text">{person.description.slice(0, 100) + ' ... '}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <button
@@ -81,7 +80,9 @@ export default class price extends Component {
                       </table>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fas fa-times"></i> Close
+                      </button>
                     </div>
                   </div>
                 </div>
