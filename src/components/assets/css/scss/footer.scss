@@ -11,3 +11,17 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+footer p a:link{
+  color: #fff;
+}
+footer p a:visited{
+  color: #fff;
+}
+footer p a:hover{
+  color: #ffc107;
+  text-decoration: none;
+}
+footer p a:active{
+  color: #ffc107;
+}
