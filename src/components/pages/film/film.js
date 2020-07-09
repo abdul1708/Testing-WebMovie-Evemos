@@ -37,7 +37,9 @@ export default class film extends Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm" key={show.id}>
                   <svg class="bd-placeholder-img card-img-top" width="100%" height="225" >
-                    <text x="50%" y="50%" fill="#000">{show.title}</text>
+                    <text x="10%" y="50%" fill="#000" style={{ fontSize: 20 }}>
+                      -- {show.title} --
+                    </text>
                   </svg>
                   <div class="card-body">
                     <p class="card-text">{show.description.slice(0, 100) + ' ... '}</p>
